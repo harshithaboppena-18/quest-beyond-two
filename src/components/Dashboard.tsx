@@ -3,7 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { Upload, BookOpen, Clock, TrendingUp, Star, Play } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 export const Dashboard = () => {
+  const navigate = useNavigate();
+  
   return <section className="py-24 px-6 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center space-y-4 mb-16">
@@ -110,13 +113,13 @@ export const Dashboard = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10">
+              <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10 cursor-pointer hover:bg-primary/10 transition-colors" onClick={() => navigate('/quiz')}>
                 <Play className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
                 <div className="flex-1">
-                  <h4 className="font-medium text-sm">Practice Calculus Integration</h4>
-                  <p className="text-xs text-muted-foreground mt-1">Based on your recent quiz results</p>
+                  <h4 className="font-medium text-sm">Take Adaptive Quiz</h4>
+                  <p className="text-xs text-muted-foreground mt-1">Test your knowledge across subjects</p>
                   <Badge variant="secondary" className="mt-2 text-xs">
-                    15 min
+                    10 min
                   </Badge>
                 </div>
               </div>
