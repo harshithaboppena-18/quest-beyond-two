@@ -6,7 +6,6 @@ import { Upload, BookOpen, Clock, TrendingUp, Star, Play } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 export const Dashboard = () => {
   const navigate = useNavigate();
-  
   return <section className="py-24 px-6 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center space-y-4 mb-16">
