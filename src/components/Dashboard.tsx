@@ -3,10 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { Upload, BookOpen, Clock, TrendingUp, Star, Play } from "lucide-react";
-
 export const Dashboard = () => {
-  return (
-    <section className="py-24 px-6 bg-muted/30">
+  return <section className="py-24 px-6 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl font-bold text-foreground">
@@ -23,7 +21,7 @@ export const Dashboard = () => {
           <Card className="lg:col-span-2 bg-gradient-card border-border/50 hover:shadow-medium transition-all duration-300">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Upload className="h-5 w-5 text-primary" />
+                <Upload className="h-5 w-5 text-primary bg-zinc-50" />
                 Upload Study Materials
               </CardTitle>
             </CardHeader>
@@ -95,7 +93,7 @@ export const Dashboard = () => {
               
               <div className="space-y-3">
                 <div className="flex justify-between text-sm">
-                  <span>Literature</span>
+                  <span>Communication </span>
                   <span className="text-muted-foreground">91%</span>
                 </div>
                 <Progress value={91} className="h-2" />
@@ -135,7 +133,7 @@ export const Dashboard = () => {
               </div>
               
               <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10">
-                <Play className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                <Play className="h-4 w-4 text-primary mt-1 flex-shrink-0 bg-slate-50" />
                 <div className="flex-1">
                   <h4 className="font-medium text-sm">Essay Writing Workshop</h4>
                   <p className="text-xs text-muted-foreground mt-1">Improve your literary analysis skills</p>
@@ -148,6 +146,5 @@ export const Dashboard = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
